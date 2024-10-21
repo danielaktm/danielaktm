@@ -1,21 +1,18 @@
 import { useState } from 'react'
-
-// Extend the Window interface to include dataLayer
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import TagManager from 'react-gtm-module'
+const tagManagerArgs = {
+  gtmId: 'GTM-M72PBQJ7'
+}
+TagManager.initialize(tagManagerArgs)
+ 
 declare global {
   interface Window {
     dataLayer: any[];
   }
 }
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-import TagManager from 'react-gtm-module'
- 
-const tagManagerArgs = {
-    gtmId: 'GTM-M72PBQJ7'
-}
-TagManager.initialize(tagManagerArgs)
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +20,7 @@ function App() {
   const onClickHandler = () => {
     setCount((count) => count + 1)
     window.dataLayer.push({
-      event: 'hola pan'
+      event: 'hola pan',
     });
   }
 
