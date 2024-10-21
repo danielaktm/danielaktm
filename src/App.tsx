@@ -1,25 +1,30 @@
 import { useState } from 'react'
+
+// Extend the Window interface to include dataLayer
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import { ReactTagManager } from 'react-gtm-ts';
 import './App.css'
 
-
-ReactTagManager.init({
-  code: 'GTM-M72PBQJ7', // GTM Code
-  debug: false, // debug mode (default false)
-  performance: false, // starts GTM only after user interaction (improve initial page load)
-});
+import TagManager from 'react-gtm-module'
+ 
+const tagManagerArgs = {
+    gtmId: 'GTM-M72PBQJ7'
+}
+TagManager.initialize(tagManagerArgs)
 
 function App() {
   const [count, setCount] = useState(0)
 
   const onClickHandler = () => {
     setCount((count) => count + 1)
-    ReactTagManager.action({
-      event: 'sani princess',
-      clickText: 'login text',
-    })
+    window.dataLayer.push({
+      event: 'hola pan'
+    });
   }
 
   const text = `Amorcita, la cuenta es ${count}`
