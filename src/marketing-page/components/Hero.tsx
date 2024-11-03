@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import { visuallyHidden } from '@mui/utils';
 import { Link as RouterLink} from "react-router-dom";
 import { styled } from '@mui/material/styles';
+import TagManager from 'react-gtm-module'
 
 const StyledBox = styled('div')(({ theme }) => ({
   alignSelf: 'center',
@@ -38,6 +39,15 @@ const StyledBox = styled('div')(({ theme }) => ({
 }));
 
 export default function Hero() {
+  const checkoutLinkClickHandler = () => {
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'checkout-click',
+        pagePath: 'root',
+        pageTitle: 'Landing',
+      },
+    });
+  }
   return (
     <Box
       id="hero"
@@ -131,8 +141,8 @@ export default function Hero() {
               size="small"
               sx={{ minWidth: 'fit-content' }}
             >
-              <RouterLink to="/checkout" style={{textDecoration: 'none', color: 'inherit'}}>
-               Haga click!!
+              <RouterLink to="/checkout" onClick={checkoutLinkClickHandler} style={{textDecoration: 'none', color: 'inherit'}}>
+                Haga click!!
               </RouterLink>
             </Button>
           </Stack>

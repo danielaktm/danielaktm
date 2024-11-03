@@ -11,6 +11,14 @@ import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import AppTheme from '../shared-theme/AppTheme';
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+  gtmId: 'GTM-M72PBQJ7'
+}
+
+TagManager.initialize(tagManagerArgs)
+
 
 export default function MarketingPage(props: { disableCustomTheme?: boolean }) {
   return (

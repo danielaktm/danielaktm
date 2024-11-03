@@ -17,11 +17,13 @@
     "@mui/material": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-router-dom": "^6.27.0"
+    "react-gtm-module": "latest",
+    "react-router-dom": "latest"
   },
   "devDependencies": {
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@types/react-gtm-module": "latest",
     "@vitejs/plugin-react": "latest",
     "gh-pages": "latest",
     "typescript": "latest",
