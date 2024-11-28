@@ -1,37 +1,46 @@
-import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
-import TagManager from "react-gtm-module";
-import AppTheme from "../shared-theme/AppTheme";
-import AppAppBar from "./components/AppAppBar";
-import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Pillita from "./components/Pillita";
-import Precios from "./components/Precios";
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
+import AppAppBar from './components/AppAppBar';
+import Hero from './components/Hero';
+import LogoCollection from './components/LogoCollection';
+import Highlights from './components/Highlights';
+import Pricing from './components/Pricing';
+import Features from './components/Features';
+import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
+import Footer from './components/Footer';
+import AppTheme from '../shared-theme/AppTheme';
+import TagManager from 'react-gtm-module'
 
 const tagManagerArgs = {
-    gtmId: "GTM-M72PBQJ7",
-};
+  gtmId: 'GTM-M72PBQJ7'
+}
 
-TagManager.initialize(tagManagerArgs);
+TagManager.initialize(tagManagerArgs)
+
 
 export default function MarketingPage(props: { disableCustomTheme?: boolean }) {
-    return (
-        <AppTheme {...props}>
-            <CssBaseline enableColorScheme />
+  return (
+    <AppTheme {...props}>
+      <CssBaseline enableColorScheme />
 
-            <AppAppBar />
-            <Hero />
-            <div>
-                <Divider />
-                <Pillita />
-                <Divider />
-                <Precios />
-                <Divider />
-                <FAQ />
-                <Divider />
-                <Footer />
-            </div>
-        </AppTheme>
-    );
+      <AppAppBar />
+      <Hero />
+      <div>
+        <LogoCollection />
+        <Features />
+        <Divider />
+        <Testimonials />
+        <Divider />
+        <Highlights />
+        <Divider />
+        <Pricing />
+        <Divider />
+        <FAQ />
+        <Divider />
+        <Footer />
+      </div>
+    </AppTheme>
+  );
 }

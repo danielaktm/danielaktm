@@ -18,14 +18,12 @@
     "react": "latest",
     "react-dom": "latest",
     "react-gtm-module": "latest",
-    "react-router-dom": "latest",
-    "react-scroll": "^1.9.0"
+    "react-router-dom": "latest"
   },
   "devDependencies": {
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/react-gtm-module": "latest",
-    "@types/react-scroll": "^1.8.10",
     "@vitejs/plugin-react": "latest",
     "gh-pages": "latest",
     "typescript": "latest",
