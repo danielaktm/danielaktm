@@ -1,37 +1,46 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import { ThemeProvider } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
-import theme from './theme';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import App from './App';
-import Checkout from './checkout/Checkout';
-import MarketingPage from './marketing-page/MarketingPage';
+import { CssBaseline } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
+import Checkout from "./checkout/Checkout";
+import MarketingPage from "./marketing-page/MarketingPage";
+import SignIn from "./sign-in-side/SignInSide";
+import SignUp from "./sign-up/SignUp";
+import theme from "./theme";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element:  <MarketingPage />,
-  },
-  {
-    path: "/checkout",
-    element:  <Checkout />,
-  },
-  {
-    path: "/vite-default",
-    element:  <App />,
-  },
-], { 'basename': '/danielaktm'} );
+const router = createBrowserRouter(
+    [
+        {
+            path: "/",
+            element: <MarketingPage />,
+        },
+        {
+            path: "/checkout",
+            element: <Checkout />,
+        },
+        {
+            path: "/vite-default",
+            element: <App />,
+        },
+        {
+            path: "/sign-in",
+            element: <SignIn />,
+        },
+        {
+            path: "/sign-up",
+            element: <SignUp />,
+        },
+    ],
+    { basename: "/danielaktm" }
+);
 
-
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <RouterProvider router={router} />
-    </ThemeProvider>
-  </React.StrictMode>,
+ReactDOM.createRoot(document.getElementById("root")!).render(
+    <React.StrictMode>
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <RouterProvider router={router} />
+        </ThemeProvider>
+    </React.StrictMode>
 );
