@@ -99,6 +99,20 @@ export default function AppAppBar() {
                                 size="small"
                             >
                                 <Link
+                                    to="regalos"
+                                    smooth={true}
+                                    duration={1000}
+                                    offset={-50}
+                                >
+                                    Regalos
+                                </Link>
+                            </Button>
+                            <Button
+                                variant="text"
+                                color="info"
+                                size="small"
+                            >
+                                <Link
                                     to="precios"
                                     smooth={true}
                                     duration={1000}

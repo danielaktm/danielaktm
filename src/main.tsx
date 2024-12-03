@@ -6,8 +6,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Checkout from "./checkout/Checkout";
 import MarketingPage from "./marketing-page/MarketingPage";
+import RegalosPillita from "./regalos-pillita/RegalosPillita";
 import SignIn from "./sign-in-side/SignInSide";
 import SignUp from "./sign-up/SignUp";
+
 import theme from "./theme";
 
 const router = createBrowserRouter(
@@ -31,6 +33,10 @@ const router = createBrowserRouter(
         {
             path: "/sign-up",
             element: <SignUp />,
+        },
+        {
+            path: "/regalos",
+            element: <RegalosPillita />,
         },
     ],
     { basename: "/danielaktm" }

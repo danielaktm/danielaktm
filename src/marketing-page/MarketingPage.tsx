@@ -5,6 +5,7 @@ import AppTheme from "../shared-theme/AppTheme";
 import AppAppBar from "./components/AppAppBar";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
+import GiftPillita from "./components/GiftsPillita";
 import Hero from "./components/Hero";
 import Pillita from "./components/Pillita";
 import Precios from "./components/Precios";
@@ -23,8 +24,9 @@ export default function MarketingPage(props: { disableCustomTheme?: boolean }) {
             <AppAppBar />
             <Hero />
             <div>
-                <Divider />
                 <Pillita />
+                <Divider />
+                <GiftPillita />
                 <Divider />
                 <Precios />
                 <Divider />
