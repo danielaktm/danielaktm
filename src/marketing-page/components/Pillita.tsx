@@ -1,38 +1,32 @@
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import MuiChip from "@mui/material/Chip";
 import Container from "@mui/material/Container";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-import * as React from "react";
-
-import PetsIcon from "@mui/icons-material/Pets";
 
 const items = [
+    { title: "PillaCute", image: "/danielaktm/images/PillaCute.jpeg" },
+    { title: "PillaDiosa1", image: "/danielaktm/images/PillaDiosa1.jpeg" },
+    { title: "PillaDiosa2", image: "/danielaktm/images/PillaDiosa2.jpeg" },
+    { title: "PillaDiosa3", image: "/danielaktm/images/PillaDiosa3.jpeg" },
+    { title: "PillaFlor", image: "/danielaktm/images/PillaFlor.jpeg" },
     {
-        icon: <PetsIcon />,
-        title: "Ejemplo 1",
-        description:
-            "This item could provide a snapshot of the most important metrics or data points related to the product.",
-        imageLight: `url("/danielaktm/images/cat1.jpg")`,
-        imageDark: `url("/danielaktm/images/cat1.jpg")`,
+        title: "PillaInvocando",
+        image: "/danielaktm/images/PillaInvocando.jpeg",
     },
+    { title: "PillaLoca1", image: "/danielaktm/images/PillaLoca1.jpeg" },
+    { title: "PillaLoca2", image: "/danielaktm/images/PillaLoca2.jpeg" },
+    { title: "PillaMimir1", image: "/danielaktm/images/PillaMimir1.jpeg" },
+    { title: "PillaMimir2", image: "/danielaktm/images/PillaMimir2.jpeg" },
+    { title: "PillaMimir3", image: "/danielaktm/images/PillaMimir3.jpeg" },
+    { title: "PillaMimir4", image: "/danielaktm/images/PillaMimir4.jpeg" },
+    { title: "PillaMimir5", image: "/danielaktm/images/PillaMimir5.jpeg" },
+    { title: "PillaMimir6", image: "/danielaktm/images/PillaMimir6.jpeg" },
+    { title: "PillaMimir7", image: "/danielaktm/images/PillaMimir7.jpeg" },
     {
-        icon: <PetsIcon />,
-        title: "Ejemplo 2",
-        description:
-            "This item could provide information about the mobile app version of the product.",
-        imageLight: `url("/danielaktm/images/cat1.jpg")`,
-        imageDark: `url("/danielaktm/images/cat1.jpg")`,
-    },
-    {
-        icon: <PetsIcon />,
-        title: "Ejemplo 3",
-        description:
-            "This item could let users know the product is available on all platforms, such as web, mobile, and desktop.",
-        imageLight: `url("/danielaktm/images/cat1.jpg")`,
-        imageDark: `url("/danielaktm/images/cat1.jpg")`,
+        title: "PillaRecienDespierta",
+        image: "/danielaktm/images/PillaRecienDespierta.jpeg",
     },
 ];
 
@@ -110,9 +104,9 @@ export function MobileLayout({
                         items[selectedItemIndex]
                             ? ({
                                   "--items-imageLight":
-                                      items[selectedItemIndex].imageLight,
+                                      items[selectedItemIndex].image,
                                   "--items-imageDark":
-                                      items[selectedItemIndex].imageDark,
+                                      items[selectedItemIndex].image,
                               } as any)
                             : {}
                     }
@@ -124,12 +118,6 @@ export function MobileLayout({
                     >
                         {selectedFeature.title}
                     </Typography>
-                    <Typography
-                        variant="body2"
-                        sx={{ color: "text.secondary", mb: 1.5 }}
-                    >
-                        {selectedFeature.description}
-                    </Typography>
                 </Box>
             </Card>
         </Box>
@@ -137,142 +125,65 @@ export function MobileLayout({
 }
 
 export default function Pillita() {
-    const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
-
-    const handleItemClick = (index: number) => {
-        setSelectedItemIndex(index);
-    };
-
-    const selectedFeature = items[selectedItemIndex];
-
     return (
         <Container
-            id="pillita"
-            sx={{ py: { xs: 8, sm: 16 } }}
+            id="collage"
+            sx={{
+                py: { xs: 8, sm: 16 },
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+            }}
         >
-            <Box sx={{ width: { sm: "100%", md: "60%" } }}>
-                <Typography
-                    component="h2"
-                    variant="h2"
-                    gutterBottom
-                    sx={{ color: "text.primary" }}
-                >
-                    Pillita
-                </Typography>
-            </Box>
             <Box
                 sx={{
-                    display: "flex",
-                    flexDirection: { xs: "column", md: "row-reverse" },
-                    gap: 2,
+                    display: "grid",
+                    gridTemplateColumns: {
+                        xs: "repeat(2, 1fr)",
+                        sm: "repeat(3, 1fr)",
+                        md: "repeat(4, 1fr)",
+                    },
+                    gap: 0,
+                    width: "100%",
                 }}
             >
-                <div>
+                {items.map(({ image }, index) => (
                     <Box
+                        key={index}
                         sx={{
-                            display: { xs: "none", sm: "flex" },
-                            flexDirection: "column",
-                            gap: 2,
-                            height: "100%",
-                        }}
-                    >
-                        {items.map(({ icon, title, description }, index) => (
-                            <Box
-                                key={index}
-                                component={Button}
-                                onClick={() => handleItemClick(index)}
-                                sx={[
-                                    (theme) => ({
-                                        p: 2,
-                                        height: "100%",
-                                        width: "100%",
-                                        "&:hover": {
-                                            backgroundColor:
-                                                theme.palette.action.hover,
-                                        },
-                                    }),
-                                    selectedItemIndex === index && {
-                                        backgroundColor: "action.selected",
-                                    },
-                                ]}
-                            >
-                                <Box
-                                    sx={[
-                                        {
-                                            width: "100%",
-                                            display: "flex",
-                                            flexDirection: "column",
-                                            alignItems: "left",
-                                            gap: 1,
-                                            textAlign: "left",
-                                            textTransform: "none",
-                                            color: "text.secondary",
-                                        },
-                                        selectedItemIndex === index && {
-                                            color: "text.primary",
-                                        },
-                                    ]}
-                                >
-                                    {icon}
-
-                                    <Typography variant="h6">
-                                        {title}
-                                    </Typography>
-                                    <Typography variant="body2">
-                                        {description}
-                                    </Typography>
-                                </Box>
-                            </Box>
-                        ))}
-                    </Box>
-                    <MobileLayout
-                        selectedItemIndex={selectedItemIndex}
-                        handleItemClick={handleItemClick}
-                        selectedFeature={selectedFeature}
-                    />
-                </div>
-                <Box
-                    sx={{
-                        display: { xs: "none", sm: "flex" },
-                        width: { xs: "100%", md: "70%" },
-                        height: "var(--items-image-height)",
-                    }}
-                >
-                    <Card
-                        variant="outlined"
-                        sx={{
-                            height: "100%",
-                            width: "100%",
-                            display: { xs: "none", sm: "flex" },
-                            pointerEvents: "none",
+                            position: "relative",
+                            overflow: "visible",
+                            aspectRatio: "1",
+                            "&:hover img": {
+                                transform: {
+                                    xs: "scale(1.2)",
+                                    sm: "scale(1.25)",
+                                    md: "scale(1.5)",
+                                },
+                                zIndex: 10,
+                                boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.4)",
+                            },
                         }}
                     >
                         <Box
-                            sx={(theme) => ({
-                                m: "auto",
-                                width: 560,
-                                height: 500,
-                                backgroundSize: "cover",
-                                backgroundImage: "var(--items-imageLight)",
-                                ...theme.applyStyles("dark", {
-                                    backgroundImage: "var(--items-imageDark)",
-                                }),
-                            })}
-                            style={
-                                items[selectedItemIndex]
-                                    ? ({
-                                          "--items-imageLight":
-                                              items[selectedItemIndex]
-                                                  .imageLight,
-                                          "--items-imageDark":
-                                              items[selectedItemIndex]
-                                                  .imageDark,
-                                      } as any)
-                                    : {}
-                            }
+                            component="img"
+                            src={image}
+                            alt={`Collage image ${index}`}
+                            sx={{
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                                transition: {
+                                    xs: "transform 0.5s ease-in-out",
+                                    sm: "transform 0.6s ease-in-out",
+                                    md: "transform 0.8s ease-in-out",
+                                },
+                                position: "relative",
+                                zIndex: 1,
+                            }}
                         />
-                    </Card>
-                </Box>
+                    </Box>
+                ))}
             </Box>
         </Container>
     );

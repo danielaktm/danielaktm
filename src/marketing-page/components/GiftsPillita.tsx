@@ -50,7 +50,7 @@ export default function GiftPillita() {
             <Box
                 sx={{
                     width: { sm: "100%", md: "60%" },
-                    textAlign: { sm: "left", md: "center" },
+                    textAlign: { sm: "center", md: "center" },
                 }}
             >
                 <Typography
@@ -72,12 +72,13 @@ export default function GiftPillita() {
             <Grid
                 container
                 spacing={{ xs: 2, md: 4 }}
-                columns={{ xs: 4, sm: 8, md: 16 }}
+                columns={{ xs: 12, sm: 8, md: 16 }}
+                justifyContent="center"
             >
                 {regalosData.slice(0, 4).map((regalo, index) => (
                     <Grid
                         key={index}
-                        size={{ xs: 1, md: 4 }}
+                        size={{ xs: 12, sm: 6, md: 4 }}
                         sx={{
                             border: "1px solid black",
                             borderRadius: "8px",
@@ -98,7 +99,8 @@ export default function GiftPillita() {
                                     : "/danielaktm/images/cat1.jpg"
                             }
                             sx={{
-                                height: { sm: "auto", md: "90%" },
+                                width: "100%",
+                                height: { xs: "100%", sm: "auto", md: "90%" },
                                 aspectRatio: { sm: "16 / 9", md: "1" },
                                 objectFit: "cover",
                                 borderRadius: "4px",
