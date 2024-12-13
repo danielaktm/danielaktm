@@ -71,6 +71,7 @@ export function MobileLayout({
 
     return (
         <Box
+            id="pillita"
             sx={{
                 display: { xs: "flex", sm: "none" },
                 flexDirection: "column",
@@ -127,7 +128,7 @@ export function MobileLayout({
 export default function Pillita() {
     return (
         <Container
-            id="collage"
+            id="pillita"
             sx={{
                 py: { xs: 8, sm: 16 },
                 display: "flex",
