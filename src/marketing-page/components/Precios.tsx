@@ -14,44 +14,44 @@ import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 
 const tiers = [
     {
-        title: "Free",
+        title: "Gratis",
         price: "0",
         description: [
-            "10 users included",
-            "2 GB of storage",
-            "Help center access",
-            "Email support",
+            "10 usuarios incluidos",
+            "2 GB de almacenamiento",
+            "Acceso al centro de ayuda",
+            "Soporte de Email",
         ],
-        buttonText: "Sign up for free",
+        buttonText: "Registrarse gratuitamente",
         buttonVariant: "outlined",
         buttonColor: "primary",
     },
     {
-        title: "Professional",
+        title: "Profesional",
         subheader: "Recommended",
         price: "15",
         description: [
-            "20 users included",
-            "10 GB of storage",
-            "Help center access",
-            "Priority email support",
-            "Dedicated team",
-            "Best deals",
+            "20 usuarios incluidos",
+            "10 de almacenamiento",
+            "Acceso al centro de ayuda",
+            "Soporte de Email prioritario",
+            "Equipo dedicado",
+            "Mejores ofertas",
         ],
-        buttonText: "Start now",
+        buttonText: "Comenzar ahora",
         buttonVariant: "contained",
         buttonColor: "secondary",
     },
     {
-        title: "Enterprise",
+        title: "Empresa",
         price: "30",
         description: [
-            "50 users included",
-            "30 GB of storage",
-            "Help center access",
-            "Phone & email support",
+            "50 usuarios incluidos",
+            "30 GB de almacenamiento",
+            "Acceso al centro de ayuda",
+            "Soporte Telefonico y Email",
         ],
-        buttonText: "Contact us",
+        buttonText: "Contactanos",
         buttonVariant: "outlined",
         buttonColor: "primary",
     },
@@ -85,15 +85,6 @@ export default function Precios() {
                 >
                     Precios
                 </Typography>
-                <Typography
-                    variant="body1"
-                    sx={{ color: "text.secondary" }}
-                >
-                    Quickly build an effective pricing table for your potential
-                    customers with this layout. <br />
-                    It&apos;s built with default Material UI components with
-                    little customization.
-                </Typography>
             </Box>
             <Grid
                 container
@@ -108,7 +99,7 @@ export default function Precios() {
                     <Grid
                         size={{
                             xs: 12,
-                            sm: tier.title === "Enterprise" ? 12 : 6,
+                            sm: tier.title === "Empresa" ? 12 : 6,
                             md: 4,
                         }}
                         key={tier.title}
@@ -121,7 +112,7 @@ export default function Precios() {
                                     flexDirection: "column",
                                     gap: 4,
                                 },
-                                tier.title === "Professional" &&
+                                tier.title === "Profesional" &&
                                     ((theme) => ({
                                         border: "none",
                                         background:
@@ -145,7 +136,7 @@ export default function Precios() {
                                             alignItems: "center",
                                             gap: 2,
                                         },
-                                        tier.title === "Professional"
+                                        tier.title === "Profesional"
                                             ? { color: "grey.100" }
                                             : { color: "" },
                                     ]}
@@ -156,7 +147,7 @@ export default function Precios() {
                                     >
                                         {tier.title}
                                     </Typography>
-                                    {tier.title === "Professional" && (
+                                    {tier.title === "Profesional" && (
                                         <Chip
                                             icon={<AutoAwesomeIcon />}
                                             label={tier.subheader}
@@ -169,7 +160,7 @@ export default function Precios() {
                                             display: "flex",
                                             alignItems: "baseline",
                                         },
-                                        tier.title === "Professional"
+                                        tier.title === "Profesional"
                                             ? { color: "grey.50" }
                                             : { color: null },
                                     ]}
@@ -184,7 +175,7 @@ export default function Precios() {
                                         component="h3"
                                         variant="h6"
                                     >
-                                        &nbsp; per month
+                                        &nbsp; mensualmente
                                     </Typography>
                                 </Box>
                                 <Divider
@@ -209,7 +200,7 @@ export default function Precios() {
                                                 {
                                                     width: 20,
                                                 },
-                                                tier.title === "Professional"
+                                                tier.title === "Profesional"
                                                     ? { color: "primary.light" }
                                                     : { color: "primary.main" },
                                             ]}
@@ -218,7 +209,7 @@ export default function Precios() {
                                             variant="subtitle2"
                                             component={"span"}
                                             sx={[
-                                                tier.title === "Professional"
+                                                tier.title === "Profesional"
                                                     ? { color: "grey.50" }
                                                     : { color: null },
                                             ]}

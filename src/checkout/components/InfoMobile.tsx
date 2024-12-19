@@ -40,7 +40,7 @@ export default function InfoMobile({ totalPrice }: InfoProps) {
         endIcon={<ExpandMoreRoundedIcon />}
         onClick={toggleDrawer(true)}
       >
-        View details
+        Ver detalles
       </Button>
       <Drawer
         open={open}

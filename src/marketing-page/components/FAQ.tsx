@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -6,6 +5,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
+import * as React from 'react';
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -52,7 +52,7 @@ export default function FAQ() {
             id="panel1d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              How do I contact customer support if I have a question or issue?
+              Como contacto a Soporte de usuario si tengo una pregunta o problema?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -61,10 +61,10 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              You can reach our customer support team by emailing
+              Puede comunicarse con nuestro equipo de atención al cliente enviando un correo electrónico a
               <Link> support@email.com </Link>
-              or calling our toll-free number. We&apos;re here to assist you
-              promptly.
+              o llamando a nuestro número gratuito. Estamos aquí para ayudarlo
+de inmediato.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -78,7 +78,7 @@ export default function FAQ() {
             id="panel2d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Can I return the product if it doesn&apos;t meet my expectations?
+              Puedo devolver el producto si no cumple mis expectativas?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -87,9 +87,9 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Absolutely! We offer a hassle-free return policy. If you&apos;re not
-              completely satisfied, you can return the product within [number of
-              days] days for a full refund or exchange.
+              ¡Por supuesto! Ofrecemos una política de devolución sin complicaciones. 
+              Si no está completamente satisfecho, puede devolver el producto en un plazo de 
+              14 días para obtener un reembolso total o un cambio.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -103,7 +103,7 @@ export default function FAQ() {
             id="panel3d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              What makes your product stand out from others in the market?
+            Qué hace que su producto se destaque de otros en el mercado?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -112,9 +112,9 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Our product distinguishes itself through its adaptability, durability,
-              and innovative features. We prioritize user satisfaction and
-              continually strive to exceed expectations in every aspect.
+              Nuestro producto se distingue por su adaptabilidad, durabilidad y características innovadoras. 
+              Priorizamos la satisfacción del usuario y nos esforzamos continuamente por superar las 
+              expectativas en todos los aspectos.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -128,7 +128,7 @@ export default function FAQ() {
             id="panel4d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Is there a warranty on the product, and what does it cover?
+            Existe garantía del producto y qué cubre?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -137,10 +137,10 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Yes, our product comes with a [length of warranty] warranty. It covers
-              defects in materials and workmanship. If you encounter any issues
-              covered by the warranty, please contact our customer support for
-              assistance.
+              Sí, nuestro producto viene con una garantía de 6 meses. Cubre
+              defectos en materiales y mano de obra. Si encuentra algún problema
+              cubierto por la garantía, comuníquese con nuestro servicio de atención al cliente para obtener
+              asistencia.
             </Typography>
           </AccordionDetails>
         </Accordion>

@@ -27,7 +27,6 @@ export default function AddressForm() {
                     id="first-name"
                     name="first-name"
                     type="name"
-                    placeholder="John"
                     autoComplete="first name"
                     required
                     size="small"
@@ -44,7 +43,6 @@ export default function AddressForm() {
                     id="last-name"
                     name="last-name"
                     type="last-name"
-                    placeholder="Snow"
                     autoComplete="last name"
                     required
                     size="small"
@@ -61,7 +59,7 @@ export default function AddressForm() {
                     id="address1"
                     name="address1"
                     type="address1"
-                    placeholder="Street name and number"
+                    placeholder="Nombre y número de calle"
                     autoComplete="shipping address-line1"
                     required
                     size="small"
@@ -73,7 +71,7 @@ export default function AddressForm() {
                     id="address2"
                     name="address2"
                     type="address2"
-                    placeholder="Apartment, suite, unit, etc. (optional)"
+                    placeholder="Apartamento, suite, unidad, etc. (opcional)"
                     autoComplete="shipping address-line2"
                     required
                     size="small"
@@ -90,7 +88,7 @@ export default function AddressForm() {
                     id="city"
                     name="city"
                     type="city"
-                    placeholder="New York"
+                    placeholder="Santiago"
                     autoComplete="City"
                     required
                     size="small"
@@ -107,7 +105,7 @@ export default function AddressForm() {
                     id="comuna"
                     name="comuna"
                     type="comuna"
-                    placeholder="NY"
+                    placeholder="Santiago Centro"
                     autoComplete="comuna"
                     required
                     size="small"

@@ -335,7 +335,7 @@ export default function PaymentForm() {
                         severity="warning"
                         icon={<WarningRoundedIcon />}
                     >
-                        Your order will be processed once we receive the funds.
+                        Su pedido será procesado una vez que recibamos los fondos.
                     </Alert>
                     <Typography
                         variant="subtitle1"

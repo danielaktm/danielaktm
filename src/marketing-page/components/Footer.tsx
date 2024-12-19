@@ -94,6 +94,13 @@ export default function Footer() {
                             variant="body2"
                             href="#"
                         >
+                            Regalos
+                        </Link>
+                        <Link
+                            color="text.secondary"
+                            variant="body2"
+                            href="#"
+                        >
                             Precios
                         </Link>
                         <Link
@@ -155,7 +162,7 @@ export default function Footer() {
                             variant="body2"
                             href="#"
                         >
-                            Privacy Policy
+                            Politicas de Privacidad
                         </Link>
                         <Typography
                             sx={{ display: "inline", mx: 0.5, opacity: 0.5 }}
@@ -167,7 +174,7 @@ export default function Footer() {
                             variant="body2"
                             href="#"
                         >
-                            Terms of Service
+                            Terminos del servicio
                         </Link>
                         <Copyright />
                     </div>
